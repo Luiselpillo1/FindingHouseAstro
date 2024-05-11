@@ -1,0 +1,115 @@
+---
+import { Icon } from 'astro-icon/components';
+import {
+	AnnouncementBar,
+	Button,
+	CustomerQuoteSection,
+	ThreeColumnTextSection,
+	YouTubeEmbedSection,
+	StickyTextImageSection,
+	CtaCardSection,
+} from '@components/odyssey-theme';
+import Layout from '../../layouts/Page.astro';
+import TextAndImageHero from '../../components/sections/heros/TextAndImageHero.astro';
+
+const seo = {
+	title: 'Landing Page #1 | Astro Odyssey Theme',
+	description: 'Landing Page #1 | Astro Odyssey Theme',
+};
+---
+
+<AnnouncementBar
+	text="Lee nuestro mas reciente post"
+	href="/blog/posts/remote-work-mental-health/"
+	slot="announcement-bar"
+/>
+<Layout {seo}>
+	<TextAndImageHero reversed>
+		<div slot="text-container">
+			<h1>Nosotros no reinventamos la rueda</h1>
+			<p>Pero hacemos una redifinición de encontrar casa fácil</p>
+		</div>
+		<div slot="btns-container">
+			<Button href="/theme/get-started" customIcon
+				>Empecemos <Fragment slot="icon">
+					<Icon name="ic:baseline-chevron-right" />
+				</Fragment></Button
+			>
+		</div>
+		<picture slot="image-container">
+			<img
+				src="/assets/images/landing-1/landing-hero-1.jpg"
+				alt="Astro Odyssee"
+				id="home-hero-image"
+			/>
+		</picture>
+	</TextAndImageHero>
+
+	<CustomerQuoteSection
+	quoteText="Finding House es una excelente opción para quienes buscan una experiencia confiable y profesional en el proceso de búsqueda de vivienda. Su enfoque en la calidad del servicio, la transparencia y la construcción de relaciones de confianza los convierte en una opción destacada en el mercado inmobiliario. Con Finding House, puedes estar seguro de recibir orientación experta y apoyo dedicado en cada paso del camino hacia tu nuevo hogar."
+	customerName="Juan Sanchez"
+/>
+	<ThreeColumnTextSection>
+		<div slot="column-1-body">
+			<h2>Por qué?</h2>
+			<p>
+				
+Finding House reconoce la importancia de la innovación en el sector inmobiliario, pero también valora la eficacia de las prácticas establecidas y probadas en el tiempo. En lugar de "reinventar la rueda", Finding House se enfoca en mejorar continuamente sus servicios mediante la implementación de tecnologías innovadoras, la optimización de procesos y la atención al cliente excepcional.			</p>
+		</div>
+		<Button slot="column-1-cta">Conoce más</Button>
+		<div slot="column-2-body">
+			<h2>Cómo?</h2>
+			<p>
+				Finding House logra esto al centrarse en los siguientes aspectos:
+
+		</p>
+		</div>
+		<Button slot="column-2-cta" outlined>Conoce más</Button>
+		<div slot="column-3-body">
+			<h2>Qué?</h2>
+			<p>
+				
+			Finding House logra proporcionar una experiencia confiable y consistente a sus clientes a través de varios enfoques clave:
+
+		</p>
+		</div>
+		<Button slot="column-3-cta">Conoce más</Button>
+	</ThreeColumnTextSection>
+
+	<YouTubeEmbedSection url="https://www.youtube.com/watch?v=LyEvPyfQqJo" rounded
+	/>
+
+	<StickyTextImageSection>
+		<div slot="text-container">
+			<h2>Características</h2>
+			<h3>SEO</h3>
+		<p>
+			En Finding House, nos aseguramos de que nuestras propiedades sean fácilmente
+			accesibles en los motores de búsqueda, garantizando que encuentres tu hogar
+			ideal de manera rápida y sencilla.
+		</p>
+		<h3>Adaptabilidad (Responsive)</h3>
+		<p>
+			Nuestro sitio web es completamente receptivo, lo que significa que puedes
+			acceder a él desde cualquier dispositivo, ya sea un ordenador de escritorio,
+			una tableta o un teléfono móvil, para buscar tu próximo hogar en cualquier
+			momento y lugar.
+		</p>
+		<h3>Personalización del Tema (Themeable)</h3>
+		<p>
+			En Finding House, entendemos que cada cliente tiene gustos y preferencias
+			únicas. Por eso, ofrecemos una amplia gama de opciones personalizables para
+			que encuentres la casa que se adapte perfectamente a tu estilo de vida y
+			preferencias.
+		</p>
+		</div>
+		<picture slot="image-container">
+			<img
+				src="/assets/images/landing-1/landing-sticky.jpg"
+				alt="Astro Odyssey"
+				loading="lazy"
+			/>
+		</picture>
+	</StickyTextImageSection>
+
+</Layout>

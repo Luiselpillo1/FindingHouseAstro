@@ -1,0 +1,64 @@
+---
+import ContactForm from '../../components/forms/ContactForm.astro';
+import Layout from '../../layouts/Page.astro';
+import { Container } from '@components/odyssey-theme';
+
+const seo = {
+	title: 'Contacto | Astro Odyssey Theme',
+	description: 'Pagina de Contacto',
+};
+---
+
+<Layout seo={seo}>
+	<Container>
+		<section class="contact-hero__section">
+			<div class="contact-hero__text-section">
+				<h1>Contactanos</h1>
+				<p>
+					¡Descubre el hogar de tus sueños con Finding House! ¿Estás listo para dar el paso hacia una nueva vida llena de comodidad, estilo y satisfacción? En Finding House, no solo te ayudamos a encontrar una casa, sino el lugar que verdaderamente llamarás hogar.
+
+					Imagina despertar cada mañana en un espacio que refleja tu personalidad y tus sueños. Desde acogedores apartamentos en el corazón de la ciudad hasta lujosas residencias en las tranquilas afueras, tenemos la clave para abrir las puertas hacia tu futuro.
+				</p>
+				<div>
+					<p>
+						<em><a href="tel:8008675309">33 - 2357 - 6150</a></em> • <em
+							><a href="mailto:hello@odysseytheme.com">ejemplo@finding.com</a
+							></em
+						>
+					</p>
+				</div>
+			</div>
+			<div class="col-2__container">
+				<ContactForm />
+			</div>
+		</section>
+	</Container>
+</Layout>
+
+<style>
+	.contact-hero__section {
+		margin: var(--section-margin) auto;
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		min-height: calc(90vh - var(--navbar-height));
+		gap: 3rem;
+	}
+	.contact-hero__text-section {
+		padding: 2rem;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		background-color: var(--theme-surface-1);
+		border-radius: var(--theme-shape-radius);
+	}
+	.col-2__container {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+	}
+	@media (max-width: 768px) {
+		.contact-hero__section {
+			grid-template-columns: 1fr;
+		}
+	}
+</style>

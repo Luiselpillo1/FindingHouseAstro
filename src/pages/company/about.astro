@@ -1,0 +1,44 @@
+---
+import { TextSection } from '@components/odyssey-theme';
+import Layout from '../../layouts/Page.astro';
+import HeroSection from '../../components/sections/heros/HeroSection.astro';
+
+const seo = {
+	title: 'About | Astro Odyssey Theme',
+	description: 'About Page',
+};
+---
+
+<Layout {seo}>
+	<HeroSection>
+		<div slot="text-container">
+			<h1>Sobre Finding House</h1>
+			<p>
+				En nuestra plataforma, nos enorgullecemos de ofrecer una amplia selección de propiedades residenciales para satisfacer las necesidades y los deseos de nuestros clientes más exigentes. Ya sea que estés buscando tu primera casa,
+         una propiedad de inversión o tu próximo hogar de ensueño, estamos aquí para ayudarte a encontrar la casa perfecta que se adapte a tu estilo de vida y presupuesto.
+			</p>
+		</div>
+    <picture slot="image-container">
+      <img
+        src="/assets/images/home/classic-hero.jpg"
+        alt="Astro Odyssee"
+        id="home-hero-image"
+      />
+    </picture>
+	</HeroSection>
+  <TextSection narrow>
+    <p>
+      En nuestra plataforma, nos dedicamos apasionadamente a conectar a nuestros clientes con el hogar perfecto que refleje sus sueños y necesidades.
+      Con una amplia gama de propiedades residenciales disponibles, desde acogedores apartamentos hasta majestuosas residencias, nos enorgullecemos de ofrecer opciones que se ajusten a diversos estilos de vida y presupuestos.
+    </p>
+    <p>Ya sea que estés dando tus primeros pasos en el mundo de la propiedad, buscando una inversión sólida o persiguiendo el lugar que llamarás hogar durante años venideros, estamos aquí para guiarte en cada paso del camino. Nuestro equipo experto está comprometido en comprender tus preferencias y requisitos únicos para proporcionarte una experiencia de búsqueda de vivienda personalizada y sin complicaciones.</p>
+    
+    <p>
+      Desde las vibrantes calles de la ciudad hasta los tranquilos suburbios, nuestras propiedades abarcan una amplia variedad de ubicaciones para adaptarse a tus preferencias de estilo de vida. Nos esforzamos por ofrecer opciones que no solo cumplan con tus expectativas, sino que las superen,
+       permitiéndote encontrar ese lugar especial que te haga sentir verdaderamente en casa.
+    </p>
+    <p>
+      En cada etapa del proceso, desde la búsqueda hasta la firma final, nuestro objetivo es brindarte la tranquilidad y la confianza necesarias para tomar decisiones informadas y satisfactorias. Con un enfoque centrado en el cliente y un compromiso inquebrantable con la excelencia, estamos aquí para convertir tu búsqueda de casa en una experiencia emocionante y gratificante. ¡Descubre tu próximo hogar con nosotros hoy mismo y deja que comience la emocionante aventura de encontrar tu lugar perfecto en el mundo!x
+    </p>
+  </TextSection>
+</Layout>

@@ -1,0 +1,26 @@
+---
+import { Button, FormInput, FormSelect, FormTextarea } from '@components/odyssey-theme';
+
+const selectOptions = [
+  "Busquedas de Google",
+  "Redes sociales",
+  "Correo",
+]
+
+---
+
+<form name="Formulario de contacto" method="POST" action="/contact-thank-you">
+  <FormInput type="text" label="Nombre" name="Nombre" placeholder="Carlos López" />
+  <FormInput type="email" label="Email" name="Email" placeholder="correo@ejemplo.com" />
+  <FormSelect label="Como supiste sobre nosotros?" options={selectOptions} />
+  <FormTextarea label="Mensaje" name="Mensaje" placeholder="Escribe tu mensaje..." />
+  <Button>Aceptar</Button>
+</form>
+
+<style>
+  form {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+</style>

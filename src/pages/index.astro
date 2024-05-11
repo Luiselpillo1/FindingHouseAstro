@@ -1,0 +1,70 @@
+---
+import { Container, FeatureCard } from '@components/odyssey-theme';
+
+import Layout from '../layouts/Page.astro';
+import HomeHeroSection from '../components/sections/heros/HomeHeroSection.astro';
+---
+
+<Layout>
+	<HomeHeroSection />
+	<Container>
+		<section class="feature-card__section">
+			<h2>Pagina extra 1</h2>
+			<p>
+				Revisa más información sobre finding house
+			</p>
+			<div class="feature-card__grid">
+				<FeatureCard href="/landing-pages/landing-1" title="Pagina Extra" imgSrc="/assets/images/home/screenshots/landing-1">
+				</FeatureCard>
+				<FeatureCard href="/landing-pages/landing-2" title="Pagina Extra 2" imgSrc="/assets/images/home/screenshots/landing-2">
+				</FeatureCard>
+			</div>
+		</section>
+	</Container>
+
+	<Container>
+		<section class="feature-card__section">
+			<h2>Paginas de la empresa</h2>
+			<p>
+				Hecha un ojo a lo que tenemos para ti
+			</p>
+			<div class="feature-card__grid">
+				<FeatureCard href="/company/about" title="Sobre nosotros" imgSrc="/assets/images/home/screenshots/about">
+				</FeatureCard>
+				<FeatureCard href="/company/contact" title="Pagina de contacto" imgSrc="/assets/images/home/screenshots/contact">
+				</FeatureCard>
+				<FeatureCard href="/blog/" title="Blog" imgSrc="/assets/images/home/screenshots/blog">
+				</FeatureCard>
+				<FeatureCard
+					href="/blog/posts/remote-work-mental-health"
+					title="Publicacion del Blog"
+          imgSrc="/assets/images/home/screenshots/blog-post"
+				>
+				</FeatureCard>
+				<FeatureCard
+					href="/company/legal"
+					imgSrc="/assets/images/home/screenshots/legal"
+					title="Terminos legales"
+				>
+				</FeatureCard>
+			</div>
+		</section>
+	</Container>
+
+	
+
+<style>
+	.feature-card__section {
+		margin: var(--section-margin) auto;
+	}
+	.feature-card__grid {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		gap: var(--theme-grid-gap);
+	}
+	@media (max-width: 768px) {
+		.feature-card__grid {
+			grid-template-columns: 1fr;
+		}
+	}
+</style>
